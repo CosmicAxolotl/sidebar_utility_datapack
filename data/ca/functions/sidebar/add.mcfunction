@@ -24,24 +24,6 @@ $team add ca.sidebar.$(id).15
 
 $scoreboard objectives add ca.sidebar.$(id) trigger $(display_name)
 
-$scoreboard players set ‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-$scoreboard players set ‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌ ca.sidebar.$(id) 0
-
-
 $team join ca.sidebar.$(id).0 ‌
 $team join ca.sidebar.$(id).1 ‌‌
 $team join ca.sidebar.$(id).2 ‌‌‌
@@ -63,6 +45,6 @@ scoreboard objectives add ca.sidebar trigger
 
 $data merge storage ca:sidebar/$(id) {id:"$(id)"}
 
-$tellraw @s [{"text":"","color":"green"},"[",$(id),"] sidebar was created successfully."]
+$tellraw @s [{"text":"","color":"green"},"[","$(id)","] sidebar was created successfully."]
 
 

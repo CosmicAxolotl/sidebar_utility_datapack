@@ -18,7 +18,8 @@ execute if score if ca.sidebar matches 0 run scoreboard players set complex ca.s
 
 
 
-execute if score complex ca.sidebar matches 1 run return run tellraw @s [{"text":" ╞══════ ","color":"dark_gray"},{"text":"[⏩] Skipping complex element.","color":"#20F540"}]
+execute if score complex ca.sidebar matches 1 run tellraw @s [{"text":" ╞══════ ","color":"dark_gray"},{"text":"[⏩] Skipping complex element.","color":"#20F540"}]
+execute if score complex ca.sidebar matches 1 run return 1
 
 $execute if data storage ca: {input:{fix:"prefix"}} run data modify storage ca: input.text set from storage ca: args.contents.lines[$(line)][0].text
 $execute if data storage ca: {input:{fix:"suffix"}} run data modify storage ca: input.text set from storage ca: args.contents.lines[$(line)][1].text

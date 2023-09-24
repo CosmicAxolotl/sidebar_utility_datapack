@@ -8,7 +8,8 @@ tellraw @s [[{"text":"[SU]: ","color":"#2AFFAD"}],{"text":"Removing sidebar...",
 
 $execute store success score if ca.sidebar run data get storage ca:sidebar registry[{id:{key:"$(id)"}}]
 
-execute if score if ca.sidebar matches 0 run return run tellraw @s [[{"text":"[SU]: ","color":"red"}],{"text":"FATAL ERROR: That ID doesn't exist in the registry!","color":"red"}]
+execute if score if ca.sidebar matches 0 run tellraw @s [[{"text":"[SU]: ","color":"red"}],{"text":"FATAL ERROR: That ID doesn't exist in the registry!","color":"red"}]
+execute if score if ca.sidebar matches 0 run return 1
 
 $execute store result score last_id ca.sidebar run data get storage ca:sidebar registry[{id:{key:"$(id)"}}].id.uuid
 

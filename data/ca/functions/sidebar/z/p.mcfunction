@@ -10,7 +10,8 @@ $execute if data storage ca: {input:{fix:"suffix"}} run data modify storage ca: 
 
 execute store result score complex ca.sidebar run data get storage ca: input.text.complex
 
-execute if score complex ca.sidebar matches 0 run return run tellraw @a[tag=tmp,limit=1] [{"text":" ╞══════ ","color":"dark_gray"},{"text":"[⏩] Skipping simple element.","color":"#20F540"}]
+execute if score complex ca.sidebar matches 0 run tellraw @a[tag=tmp,limit=1] [{"text":" ╞══════ ","color":"dark_gray"},{"text":"[⏩] Skipping simple element.","color":"#20F540"}]
+execute if score complex ca.sidebar matches 0 run return 1
 
 
 $execute if data storage ca: {input:{fix:"prefix"}} run data modify entity @s text set from storage ca:sidebar registry[{id:{key:"$(id)"}}].lines[$(line)][0].text

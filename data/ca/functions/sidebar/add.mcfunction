@@ -17,7 +17,7 @@ execute if score if ca.sidebar matches 1 run return 1
 
 $data modify storage ca: tmp set value {id:{key:"$(id)"},display_name:'$(display_name)'}
 
-data modify storage ca: tmp.lines set value []
+data modify storage ca: tmp.lines set value [[{text:'""',complex:0b}]]
 
 
 data modify storage ca: input set value {}

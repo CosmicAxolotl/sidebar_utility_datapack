@@ -9,6 +9,7 @@ $execute store success score if ca.sidebar run data get storage ca:sidebar regis
 execute if score if ca.sidebar matches 0 run tellraw @s [[{"text":"[SU]: ","color":"red"}],{"text":"FATAL ERROR: There's no sidebar in the registry with that ID!","color":"red"}]
 execute if score if ca.sidebar matches 0 run return 1
 
+
 $data modify storage ca: args set value {id:"$(id)"}
 
 tag @s add tmp
@@ -17,7 +18,7 @@ $execute store success score if ca.sidebar if data storage ca:sidebar {registry:
 
 execute if score if ca.sidebar matches 0 run tellraw @s [{"text":"[SU]: ","color":"#FFCA2A"},{"text":"Function abort: no complex lines were found in this sidebar.","color":"#FFCA2A"}]
 execute if score if ca.sidebar matches 0 run tag @s remove tmp
-execute if score if ca.sidebar matches 0 run return 1
+execute if score if ca.sidebar matches 0 run return
 
 tellraw @s [[{"text":"[SU]: ","color":"#2AFFAD"}],{"text":"Refreshing complex lines...","color":"gray"}]
 

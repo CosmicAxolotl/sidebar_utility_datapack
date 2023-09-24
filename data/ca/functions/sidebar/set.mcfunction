@@ -41,11 +41,11 @@ execute if score if ca.sidebar matches 0 run return 1
 
 execute store result score entries.count ca.sidebar if data storage ca: args.contents.lines[]
 
-execute if score entries.count ca.sidebar matches 2.. run function ca:sidebar/z/check_lines
+execute if score entries.count ca.sidebar matches 2.. run function ca:sidebar/z/f
 execute if score if ca.sidebar matches 0 run return 1
 
 
-execute if score entries.count ca.sidebar matches 1.. run tellraw @s [{"text":" ╞══ Found 1 line...","color":"dark_gray"}]
+execute unless score entries.count ca.sidebar matches 2.. run tellraw @s [{"text":" ╞══ Found 1 line...","color":"dark_gray"}]
 
 
 execute if score entries.count ca.sidebar matches 17.. run scoreboard players set entries.count ca.sidebar 16
@@ -54,7 +54,7 @@ data modify storage ca: input set value {}
 data modify storage ca: input.id set from storage ca: args.id
 execute store result storage ca: input.lines int 1 run scoreboard players get entries.count ca.sidebar
 
-function ca:sidebar/z/set with storage ca: input
+function ca:sidebar/z/g with storage ca: input
 
 tellraw @s [{"text":" ╘═ ","color":"dark_gray"},{"text":"[✔] Function end. Calling ca:sidebar/refresh function...","color":"#20F540"}]
 

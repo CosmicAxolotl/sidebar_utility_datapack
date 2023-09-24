@@ -1,6 +1,6 @@
 
 
-$data modify storage ca:sidebar registry[{id:{key:"$(id)"}}].complex_lines append from storage ca: args.contents.lines
+$data modify storage ca:sidebar registry[{id:{key:"$(id)"}}].lines set from storage ca: args.contents.lines
 $data modify storage ca: tmp set from storage ca:sidebar registry[{id:{key:"$(id)"}}]
 
 $scoreboard players operation ca.sidebar.old_lines_count ca.sidebar = ca.sidebar.$(id).lines ca.sidebar

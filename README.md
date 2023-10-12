@@ -30,11 +30,11 @@ Elements:
     [
       {
         text: <prefix; Simple or Complex Raw JSON text string>,
-        complex: <byte>
+        complex: <byte; optional; 1b declares a Complex Raw JSON text string, 0b declares a Simple Raw JSON text string; Ommision default 0b>
       },
       {
         text: <suffix; Simple or Complex Raw JSON text string; optional; Ommision default to empty>,
-        complex: <byte>
+        complex: <byte; optional; 1b declares a Complex Raw JSON text string, 0b declares a Simple Raw JSON text string; Ommision default 0b>
       }
     ],
     <every new list states a new line using the previous structure; lines are made from to bottom, up to 16 lines>

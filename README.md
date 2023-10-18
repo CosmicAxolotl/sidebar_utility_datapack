@@ -1,5 +1,7 @@
 # Sidebar Utility Datapack
-> *A structured and simple way to create eye-catching sidebars for general purposes.*
+> *[tl;dr] A structured and simple way to create eye-catching sidebars for general purposes.*
+
+Sidebar Utility Datapack is an mcfunction library designed to create & manage visually eye-catching sidebars as you could see in any Minecraft server with plugins like Hypixel, Cubecraft & others. It allows you to write & update automatically sidebar lines to avoid having to edit lines constantly. You cat watch the next example: 
 ## Index
 1. [Documentation](https://github.com/CosmicAxolotl/sidebar_utility_datapack/new/main?readme=1#declaring-a-sidebar-in-a-world).
    1. [function ca:sidebar/add]().
